@@ -1,0 +1,6 @@
+
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }} <!-- Renderiza el formulario automáticamente -->
+    <button type="submit">CREAR PRODUCTO</button>
+</form>

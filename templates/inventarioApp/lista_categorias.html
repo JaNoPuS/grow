@@ -1,0 +1,17 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Categorías de Productos</title>
+</head>
+<body>
+    <h1>Lista de Categorías de Productos</h1>
+    <a href="{% url 'inventarioApp:crear_categoria' %}">Crear Nueva Categoría de Productos</a>
+    <ul>
+        {% for categoria in categorias %}
+            <li>{{ categoria.nombre }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

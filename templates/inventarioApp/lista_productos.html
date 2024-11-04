@@ -1,0 +1,20 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Productos</title>
+</head>
+<body>
+    <h1>Lista de Productos</h1>
+    <a href="{% url 'inventarioApp:crear_producto' %}">Crear Producto Nuevo</a>
+    <ul>
+        {% for producto in productos %}
+            <li>
+                {{ producto.nombre }} - {{ producto.precio }} - <a href="{% url 'inventarioApp:actualizar_producto' producto.id %}">Actualizar Producto</a> - 
+                <a href="{% url 'inventarioApp:eliminar_producto' producto.id %}">Eliminar Producto</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
